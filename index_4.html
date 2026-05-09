@@ -711,6 +711,7 @@ function loadAll() {
   try { clients      = JSON.parse(localStorage.getItem('clients_v4') || '[]'); } catch(e) { clients=[]; }
   try { planningItems= JSON.parse(localStorage.getItem('planning_v1')|| '[]'); } catch(e) { planningItems=[]; }
   try { interCounter = parseInt(localStorage.getItem('inter_counter') || '1'); } catch(e) {}
+  refreshClientDD();
   renderClients();
   loadIntervention();
 }
